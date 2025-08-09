@@ -1,8 +1,8 @@
 export const TextBlue = ({ children, className }) => {
-    return <span className={`${className} text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-[#e8479b]`}>{children}</span>
+    return <div className={`${className} text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-[#ba47e8]`}>{children}</div>
 }
 
 export const TextPink = ({ children, className }) => {
-    return <span className={`${className} text-transparent bg-gradient-to-r bg-clip-text from-[#e8479b] to-[#9533e7]`}>{children}</span>
+    return <div className={`${className} text-transparent bg-gradient-to-r bg-clip-text from-[#e8479b] to-[#9533e7]`}>{children}</div>
 }
 
