@@ -43,7 +43,7 @@ const Cards = () => {
                 data.map((p) => (
                     <div key={p.id} className="bg-pink-50 text-start rounded-xl">
                         <img
-                            className="rounded-t-xl object-cover h-[200px] w-full"
+                            className="rounded-t-xl object-cover h-[250px] w-full"
                             src={p.img}
                             alt=""
                         />
