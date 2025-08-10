@@ -7,7 +7,7 @@ import { TbDeviceAirpods, TbHanger } from "react-icons/tb";
 const About = () => {
 
     return (
-        <div className="flex flex-col md:flex-col text-center max-w-[90rem] m-auto py-10 px-6 md:px-12  w-full overflow-hidden">
+        <div className="flex flex-col md:flex-col text-center max-w-[90rem] mx-auto pb-12 px-6 md:px-12  w-full overflow-hidden">
             <div className="flex flex-col-reverse md:gap-8 place-items-center md:flex-row max-w-400 ">
                 <img className="w-full max-w-120 md:max-w-100 lg:max-w-140 " src={aboutImage} alt="Foto 3D de cadernos, lápis e uma xícara de café" />
                 <div className="flex max-w-150 flex-col md:items-start">
@@ -16,9 +16,11 @@ const About = () => {
                             <IoIosHeartEmpty className='size-7' />
                             <span>Nossa História</span>
                         </h2>
-                        <TextBlue className={'mb-10'}>
-                            <h1 className="text-4xl font-black">Sobre nós</h1>
-                        </TextBlue>
+                        <h1 className="mt-6 mb-4.5">
+                            <TextBlue className={'mb-10 text-4xl font-black'}>
+                                Sobre nós
+                            </TextBlue>
+                        </h1>
                     </div>
                     <div className="flex flex-col gap-6 md:text-start text-zinc-600 mb-7">
                         <p>
