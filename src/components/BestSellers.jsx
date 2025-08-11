@@ -18,7 +18,7 @@ const BestSellers = () => {
             </h1>
             <Cards />
             <button className='text-blue-600 mt-5 border-b place-self-center flex items-center gap-2'>
-                Ver mais
+                Ver catálogo
                 <BsArrowRight />
             </button>
         </div>

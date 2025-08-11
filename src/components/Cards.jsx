@@ -41,7 +41,7 @@ const Cards = () => {
         <Carousel itemClass="px-2" responsive={responsive}>
             {data &&
                 data.map((p) => (
-                    <div key={p.id} className="bg-pink-50 text-start rounded-xl">
+                    <div key={p.id} className="bg-violet-50  text-start max-w-90 rounded-xl">
                         <img
                             className="rounded-t-xl object-cover h-[250px] w-full"
                             src={p.img}

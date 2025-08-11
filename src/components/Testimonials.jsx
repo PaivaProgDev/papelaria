@@ -28,7 +28,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <div className='text-center max-w-[90rem]  mx-auto px-6 m-20'>
+        <div className='text-center max-w-[90rem]  mx-auto px-6'>
             <h2 className='flex  items-center justify-center gap-2 mb-3'>
                 <RiSpeakFill className='size-7 text-yellow-500' />
                 <span className='text-pink-600'>Depoimentos</span>
@@ -38,6 +38,7 @@ const Testimonials = () => {
                     O que dizem nossos clientes
                 </TextPink>
             </h1>
+            <p className="text-zinc-600">Os clientes nos amam, um pouco do nosso feedback!</p>
             <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-self-center gap-6 mt-15">
                 {
                     commentarys.map((client, index) => (
