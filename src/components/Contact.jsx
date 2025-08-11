@@ -6,8 +6,8 @@ import Map from "./Map"
 
 const Contact = () => {
     return (
-        <div className="bg-[#fbf3fb]">
-            <div className='text-center flex flex-col items-center max-w-[90rem] mx-auto px-6 py-16 '>
+        <div id="contact" className="bg-[#fbf3fb]">
+            <div className='text-center flex flex-col items-center max-w-[90rem] sm:px-6 mx-auto py-16 '>
                 <h2 className='flex  items-center justify-center gap-2 mb-3'>
                     <FiMessageCircle className='size-7 text-yellow-500' />
                     <span className='text-pink-600'>Fale Conosco</span>
@@ -18,8 +18,8 @@ const Contact = () => {
                     </TextPink>
                 </h1>
                 <p className="text-zinc-600">Dúvidas, pedidos ou sugestões? Fale conosco diretamente no WhatsApp.</p>
-                <div className="flex flex-col sm:flex-row gap-10 mt-17">
-                    <div className="bg-white p-8 flex flex-col gap-6 text-start max-w-130 rounded-2xl shadow-xl">
+                <div className="flex flex-col w-full lg:flex-row items-center gap-10 mt-17">
+                    <div className="bg-white p-8 flex flex-col gap-6 text-start  rounded-2xl shadow-xl">
                         <h1 className="text-start text-2xl text-zinc-700">Vamos conversar!</h1>
                         <div className="flex gap-3">
                             <span className="bg-[#dcfce7] text-2xl flex w-fit h-fit rounded-xl p-3">
@@ -48,9 +48,11 @@ const Contact = () => {
                                 <span className="text-zinc-500">Rua Agostinho Teles de Castro, 856, Lourdes</span>
                             </div>
                         </div>
-                        <ButtonWhats className={'w-full mt-2'} />
+                        <ButtonWhats className={'w-full mt-2'} >
+                            Enviar uma Mensagem
+                        </ButtonWhats>
                     </div>
-                    <div>
+                    <div className="px-6">
                         <p className="mb-5 text-blue-500">Encontre nosso estabelecimento no mapa a baixo!</p>
                         <Map />
                     </div>

@@ -28,7 +28,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <div className='text-center max-w-[90rem]  mx-auto px-6'>
+        <div id="testimonials" className='text-center max-w-[90rem]  mx-auto px-6'>
             <h2 className='flex  items-center justify-center gap-2 mb-3'>
                 <RiSpeakFill className='size-7 text-yellow-500' />
                 <span className='text-pink-600'>Depoimentos</span>
@@ -59,9 +59,11 @@ const Testimonials = () => {
                     ))
                 }
             </ul>
-            <div className="flex flex-col gap-7 p-10  justify-self-center items-center max-w-200 rounded-3xl mt-3">
+            <div className="flex flex-col gap-7 p-10 justify-self-center rounded-3xl mt-3">
                 <TextBlue className="text-2xl font-black">Você também terá uma ótima experiência.</TextBlue>
-                <ButtonWhats />
+                <ButtonWhats className={'w-full'} >
+                    Chamar no WhatsApp
+                </ButtonWhats>
             </div>
         </div>
     )

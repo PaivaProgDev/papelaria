@@ -17,7 +17,7 @@ const Header = () => {
 
     const { links } = Links()
     return (
-        <div>
+        <div className="sticky top-0 z-50">
             <header className="flex items-center px-6 py-3 relative z-20 border-b bg-white border-zinc-200 justify-between">
                 <h1 className="text-2xl">Logo</h1>
                 {
@@ -28,13 +28,15 @@ const Header = () => {
                         {
                             links.map((l, index) => (
                                 <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
-                                    <TextBlue className='flex items-center flex-col gap-2'>
-                                        {l.title}
-                                    </TextBlue>
+                                    <a href={l.href}>
+                                        <TextBlue className='flex items-center flex-col gap-2'>
+                                            {l.title}
+                                        </TextBlue>
+                                    </a>
                                 </li>
                             ))
                         }
-                        <ButtonWhats className={'!mt-0 !py-1 text-sm'} />
+                        <ButtonWhats className={'!mt-0 !p-1.5 text-sm'} ></ButtonWhats>
                     </ul>
                 </nav>
             </header>
@@ -53,7 +55,9 @@ const Header = () => {
                                 ))
                             }
                         </ul>
-                        <ButtonWhats className={' flex justify-center place-self-center mt-6 text-sm'} />
+                        <ButtonWhats className={' flex justify-center place-self-center mt-6 text-sm'} >
+                            Chamar no WhatsApp
+                        </ButtonWhats >
                     </nav>
                 </div>
             </div>
