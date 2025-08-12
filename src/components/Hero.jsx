@@ -5,7 +5,7 @@ import ImageHero from '../assets/images/img-hero.png'
 
 const Hero = () => {
     return (
-        <main id='hero' className='bg-gradient-to-br px-6 py-12 md:px-12 from-pink-100 to-blue-100'>
+        <main id='hero' className='bg-gradient-to-br px-6 py-12 md:px-12 from-pink-200 to-blue-200'>
             <div className='max-w-[90rem] text-zinc-700 flex flex-col lg:flex-row items-center justify-evenly m-auto text-center gap-10 sm:text-start'>
                 <div className='flex flex-col max-w-150 '>
                     <h2 className='flex items-center gap-2 mb-6'>

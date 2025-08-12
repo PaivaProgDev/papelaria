@@ -10,6 +10,6 @@ export const ButtonWhats = ({ className, children }) => {
 }
 
 export const ButtonInsta = ({ className, children }) => {
-    return <button className={`${className} bg-gradient-to-r w-fit text-sm from-[#b517b9] to-[#f66e3b] flex items-center gap-3 justify-center py-2 px-5 rounded-full text-white cursor-pointer hover:to-white hover:from-white border-2  border-[#b517b9] hover:text-[#b517b9] duration-300`}><FaInstagram className="size-5" />Instagram</button>
+    return <a href="https://www.instagram.com/papelariapresente2024/" className={`${className} bg-gradient-to-r w-fit text-sm from-[#b517b9] to-[#f66e3b] flex items-center gap-3 justify-center py-2 px-5 rounded-full text-white cursor-pointer hover:to-white hover:from-white border-2  border-[#b517b9] hover:text-[#b517b9] duration-300`}><FaInstagram className="size-5" />Instagram</a>
 }
 

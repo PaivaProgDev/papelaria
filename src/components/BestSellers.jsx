@@ -17,7 +17,7 @@ const BestSellers = () => {
                 </TextPink>
             </h1>
             <Cards />
-            <button className='text-blue-600 mt-5 border-b place-self-center flex items-center gap-2'>
+            <button className='text-blue-600 cursor-pointer mt-5 border-b place-self-center flex items-center gap-2'>
                 Ver catálogo
                 <BsArrowRight />
             </button>
