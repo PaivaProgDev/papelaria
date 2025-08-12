@@ -2,36 +2,43 @@
   {
     "id": 1,
     "title": "Caderno Masculino Capa dura 24 matérias",
-    "img": "/images/products/caderno1.jpeg"
+    "img": "/images/products/caderno1.png",
+    "price": "24,90"
   },
   {
     "id": 2,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/caderno2.jpeg"
+    "title": "Cola líquida branca lavável marca Compactor",
+    "img": "/images/products/cola1.png",
+    "price": "6,40"
   },
   {
     "id": 3,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/borrachakazz1.jpg"
+    "title": "Borracha Plástica com capa protetora marca Kaz",
+    "img": "/images/products/borrachakazz1.png",
+    "price": "5,10"
   },
   {
     "id": 4,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/borrachakazz1.jpg"
+    "title": "Corretivo liquido lavável 18ml marca Maxi Correto",
+    "img": "/images/products/corretivo1.png",
+    "price": "5,90"
   },
   {
     "id": 5,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/borrachakazz1.jpg"
+    "title": "Lápis com borracha preto HB Tons pastéis marca Kaz",
+    "img": "/images/products/lapis1.png",
+    "price": "2,45"
   },
   {
     "id": 6,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/borrachakazz1.jpg"
+    "title": "Lapiseira 2.0 com apontador de grafite marca Kaz",
+    "img": "/images/products/lapiseira1.png",
+    "price": "10,99"
   },
   {
     "id": 7,
-    "title": "Caderno Feminino Capa dura 24 matérias",
-    "img": "/images/products/borrachakazz1.jpg"
+    "title": "Cola Bastão Hollie Funtastic 10 marca Tris",
+    "img": "/images/products/colabastao1.png",
+    "price": "9,49"
   }
 ]

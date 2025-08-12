@@ -41,17 +41,23 @@ const Cards = () => {
         }
     }
     return (
-        <Carousel itemClass="mt-12" responsive={responsive}>
+        <Carousel itemClass="mt-12 px-3" responsive={responsive}>
             {data &&
                 data.map((p) => (
-                    <div key={p.id} className="bg-violet-50 place-self-center text-start w-100 rounded-xl">
-                        <img
-                            className="rounded-t-xl object-cover h-[250px] w-full"
-                            src={p.img}
-                            alt=""
-                        />
-                        <div className="px-4.5 py-3">
-                            <h4 className="text-zinc-700 font-light mb-7 ">{p.title}</h4>
+                    <div key={p.id} className="bg-violet-50 border border-zinc-200 text-start  flex-1 max-w-100 rounded-xl">
+                        <div className="bg-white rounded-t-xl p-3">
+                            <img
+                                className="rounded-t-xl object-cover  h-[250px] w-full"
+                                src={p.img}
+                                alt=""
+                            />
+                        </div>
+                        <div className="px-6 py-6 border-t border-zinc-200">
+                            <h4 className="text-zinc-700 font-normal text-lg mb-4 ">{p.title}</h4>
+                            <pre className="flex items-end gap-1 mb-4">
+                                <span className="text-md font-light">R$</span>
+                                <span className="text-2xl text-zinc-700">{p.price}</span>
+                            </pre>
                             <ButtonWhats className="cursor-pointer w-full rounded-lg ">
                                 Verificar estoque
                             </ButtonWhats>
