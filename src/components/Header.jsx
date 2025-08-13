@@ -3,7 +3,7 @@ import Links from "./Links"
 import { useState } from "react"
 import { IoMdClose } from "react-icons/io"
 import { ButtonWhats } from "./Button"
-import { TextBlue, TextPink } from "./TextColor"
+import { TextBlue } from "./TextColor"
 import SearchBar from "./SearchBar"
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
 
     const { links } = Links()
     return (
-        <header className="sticky top-0">
+        <header className="sticky top-0 shadow-lg">
             <div className="flex items-center gap-10 z-[999] px-6 py-3  border-b bg-white border-zinc-200 justify-between">
                 <h1 className="text-2xl">Logo</h1>
                 <div className="hidden w-full  justify-center max-w-200 sm:flex">

@@ -10,11 +10,10 @@ const SearchBar = () => {
     const [showItems, setShowItems] = useState(false)
 
     const handleInputValue = (e) => {
-        e === '' ? setShowItems(false) : setShowItems(true)
-        const normalize = e.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
+        const value = e.target.value
+        setShowItems(value !== "")
+        const normalize = value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const filtered = data.filter(f => f.title.toLowerCase().includes(normalize.toLowerCase()))
-        e ? setShowItems(true) : setShowItems(false)
         setItemSearched(filtered)
 
     }
@@ -30,39 +29,31 @@ const SearchBar = () => {
 
     return (
         <div className="relative w-full flex justify-center">
-            <label className="flex items-center z-10 w-full bg-slate-100 focus-within:outline-2 border-zinc-300 outline-violet-500 gap-2 border rounded-lg py-1.5 px-4">
+            <label className="flex items-center z-10 w-full bg-slate-100 focus-within:outline-2 border-zinc-300 outline-violet-500 gap-2 border py-1.5 px-4">
+                <input onChange={handleInputValue} className="placeholder:text-zinc-400 w-full text-sm outline-0" type="serach" placeholder="Pesquisar produto..." />
                 <FaMagnifyingGlass className="text-zinc-500" />
-                <input onChange={(e) => {
-                    handleInputValue(e.target.value)
-                }} className="placeholder:text-zinc-400 w-full text-sm outline-0" type="serach" placeholder="Pesquisar produto..." />
             </label>
             {showItems &&
                 <>
                     <div onClick={() => setShowItems(false)} className="top-0 bottom-0 right-0 -z-10 left-0 bg-[#000000d5] fixed"></div>
-                    <div className={` absolute shadow-xl py-5 w-full  flex justify-between rounded-b-2xl bg-zinc-50 top-10.5 sm:top-11.5`}>
+                    <div className={` absolute shadow-xl w-full flex justify-between bg-zinc-50 top-8.5 border border-t-0 border-zinc-200`}>
                         {itemSearched.length ?
-                            <ul className={`${itemSearched ? "block" : "hidden"} w-full overflow-y-auto h-60`} >
-                                <div className="px-6">
-                                    <IoMdClose onClick={() => setShowItems(false)} className="place-self-end cursor-pointer size-6 mb-2 text-red-400" />
-                                </div>
+                            <ul className={`${itemSearched ? "block" : "hidden"} w-full overflow-y-auto `} >
                                 {
                                     itemSearched.map((searched) => (
                                         <li key={searched.id} className={`border-zinc-300 `}>
                                             {/* <img className="w-25 h-18 object-cover" src={searched.img} alt="" /> */}
                                             <div className="w-full ">
-                                                <span className="text-sm flex items-center gap-6 justify-between px-6 cursor-pointer py-2 hover:bg-zinc-300 w-full font-light">
-                                                    <span>{searched.title}</span>
+                                                <span className="text-sm flex items-center gap-4 px-3 py-2 cursor-pointer hover:bg-zinc-300 w-full font-light">
                                                     <span><HiMagnifyingGlass /></span>
+                                                    <span>{searched.title}</span>
                                                 </span>
                                             </div>
                                         </li>
                                     ))
                                 }
                             </ul> :
-                            <div className="w-full px-6">
-                                <div className="px-6 ">
-                                    <IoMdClose onClick={() => setShowItems(false)} className="place-self-end cursor-pointer size-6 mb-2 text-red-400" />
-                                </div>
+                            <div className="w-full px-3 py-2">
                                 <p className="text-sm text-center font-light">Nenhum produto encontrado...</p>
                             </div>}
                     </div>
