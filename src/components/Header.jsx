@@ -4,7 +4,7 @@ import { useState } from "react"
 import { IoMdClose } from "react-icons/io"
 import { ButtonWhats } from "./Button"
 import { TextBlue, TextPink } from "./TextColor"
-
+import SearchBar from "./SearchBar"
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -12,18 +12,18 @@ const Header = () => {
         setOpenMenu(!openMenu)
     }
 
-    openMenu ? document.body.style.overflowY = 'hidden' :
-        document.body.style.overflowY = 'auto'
-
     const { links } = Links()
     return (
-        <div className="sticky top-0 z-50">
-            <header className="flex items-center px-6 py-3 relative z-20 border-b bg-white border-zinc-200 justify-between">
+        <header className="sticky top-0">
+            <div className="flex items-center gap-10 z-[999] px-6 py-3  border-b bg-white border-zinc-200 justify-between">
                 <h1 className="text-2xl">Logo</h1>
+                <div className="hidden w-full  justify-center max-w-200 sm:flex">
+                    <SearchBar />
+                </div>
                 {
-                    openMenu ? <IoMdClose onClick={handleOpenMenu} className="size-7 text-red-400 cursor-pointer" /> : <IoMenuSharp onClick={handleOpenMenu} className="size-7 md:hidden block cursor-pointer" />
+                    openMenu ? <span><IoMdClose onClick={handleOpenMenu} className="size-7 text-red-400 cursor-pointer" /></span> : <span><IoMenuSharp onClick={handleOpenMenu} className="size-7 lg:hidden block cursor-pointer" /></span>
                 }
-                <nav className="hidden md:block">
+                <nav className="hidden lg:block">
                     <ul className="flex items-center gap-10">
                         {
                             links.map((l, index) => (
@@ -39,12 +39,12 @@ const Header = () => {
                         <ButtonWhats className={'!mt-0 !p-1.5 text-sm'} ></ButtonWhats>
                     </ul>
                 </nav>
-            </header>
-            <div onClick={() => setOpenMenu(false)} className={`${openMenu ? "visible opacity-100" : "invisible opacity-0"} fixed duration-200 w-full h-full bg-[#00000082]`}>
+            </div>
+            <div onClick={() => setOpenMenu(false)} className={`${openMenu ? "visible opacity-100" : "invisible opacity-0"} fixed duration-200 w-full bg-w z-50 h-full bg-[#00000082]`}>
                 <div onClick={(e) => {
                     e.stopPropagation()
                     setOpenMenu(false)
-                }} className={`${openMenu ? "lg:right-0 top-[57px]" : "lg:-right-full -top-full "} lg:top-[57px] duration-300 px-7 py-5 bg-zinc-100 ease-in-out fixed lg:w-55 lg:h-full w-full lg:bottom-0 border-l border-zinc-200`}>
+                }} className={`${openMenu ? "lg:right-0 top-[57px]" : "lg:-right-full -top-full "} lg:top-[57px] duration-300 px-7 py-5 bg-zinc-100 -z-50 ease-in-out fixed lg:w-55 lg:h-full w-full lg:bottom-0 border-l border-zinc-200`}>
                     <nav>
                         <ul className="grid grid-cols-2 place-self-center sm:grid-cols-3 gap-7 ">
                             {
@@ -64,7 +64,10 @@ const Header = () => {
                     </nav>
                 </div>
             </div>
-        </div>
+            <div className="flex bg-white relative sm:hidden px-6 py-2">
+                <SearchBar />
+            </div>
+        </header>
     )
 }
 
