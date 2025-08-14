@@ -61,116 +61,110 @@
   },
   {
     "id": 11,
-    "title": "Cola Branca para isopor e EVA 40g marca Frama",
-    "img": "/images/allProducts/cola1.png",
-    "price": "5,49"
-  },
-  {
-    "id": 12,
     "title": "Cola Bastão 10g marca Kaz",
     "img": "/images/allProducts/cola2.png",
     "price": "2,99"
   },
   {
-    "id": 13,
+    "id": 12,
     "title": "Cola Silicone 50ml marca Kaz",
     "img": "/images/allProducts/cola3.png",
     "price": "7,35"
   },
   {
-    "id": 14,
+    "id": 13,
     "title": "Cola Silicone 50ml marca Kaz",
     "img": "/images/allProducts/cola4.png",
     "price": "7,35"
   },
   {
-    "id": 15,
+    "id": 14,
     "title": "Cola Branca 1kg marca Cola Mais",
     "img": "/images/allProducts/cola5.png",
     "price": "24,99"
   },
   {
-    "id": 16,
+    "id": 15,
     "title": "Regua sortida 30cm marca Maxcril",
     "img": "/images/allProducts/regua1.png",
     "price": "3,70"
   },
   {
-    "id": 17,
+    "id": 16,
     "title": "Regua com alfabeto marca Kaz",
     "img": "/images/allProducts/regua3.png",
     "price": "4,99"
   },
   {
-    "id": 18,
+    "id": 17,
     "title": "Cola quente fina marca Bazze",
     "img": "/images/allProducts/colaquente1.png",
     "price": "3,49"
   },
   {
-    "id": 19,
+    "id": 18,
     "title": "Cola quente grossa marca Bazze",
     "img": "/images/allProducts/colaquente2.png",
     "price": "4,49"
   },
   {
-    "id": 20,
+    "id": 19,
     "title": "Chaveiros de Resina do A ao Z",
     "img": "/images/allProducts/chaveiro1.png",
     "price": "24,99"
   },
   {
-    "id": 21,
+    "id": 20,
     "title": "Caneta Borracha marca Kaz",
     "img": "/images/allProducts/caneta1.png",
     "price": "5,99"
   },
   {
-    "id": 22,
+    "id": 21,
     "title": "Caneta Corretiva 4ml marca Kaz",
     "img": "/images/allProducts/caneta2.png",
     "price": "4,49"
   },
   {
-    "id": 23,
+    "id": 22,
     "title": "Corretivo de fita 5mm X 6mm marca Masterprint",
     "img": "/images/allProducts/corretivo1.png",
     "price": "8,49"
   },
   {
-    "id": 24,
+    "id": 23,
     "title": "Pincel n°00 ao n°10 marca Kaz",
     "img": "/images/allProducts/pincel1.png",
-    "price": "Á partir de 2,99"
+    "price": "2,99 - 6,99"
   },
   {
-    "id": 25,
+    "id": 24,
     "title": "Marca Texto rosa marca Masterprint",
     "img": "/images/allProducts/marcatexto1.png",
     "price": "3,90"
   },
   {
-    "id": 26,
+    "id": 25,
     "title": "Marca Texto luminárias marca Cis",
     "img": "/images/allProducts/marcatexto2.png",
     "price": "4,80"
   },
   {
-    "id": 27,
+    "id": 26,
     "title": "Mini Grampeador marca Kaz",
     "img": "/images/allProducts/grampeador1.png",
     "price": "9,50"
   },
   {
-    "id": 28,
+    "id": 27,
     "title": "Clips do n°2/0 ao n°8/0 Kaz",
     "img": "/images/allProducts/clip1.png",
-    "price": "Á partir de 4,50"
+    "price": "4,50 - 9,50"
   },
   {
-    "id": 29,
+    "id": 28,
     "title": "Grampos Galvanizado 26/6 com 1000 unidades marca Kaz",
     "img": "/images/allProducts/gramp1.png",
-    "price": "Á partir de 4,50"
+    "price": "9,60"
   }
 ]

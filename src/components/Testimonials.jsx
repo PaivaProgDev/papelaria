@@ -2,6 +2,7 @@ import { RiSpeakFill } from "react-icons/ri"
 import { TextBlue, TextPink } from "./TextColor"
 import { LiaStarSolid } from "react-icons/lia"
 import { ButtonWhats } from "./Button"
+import ImgTestimonials from '../assets/images/img-hero3.jpg'
 
 const Testimonials = () => {
     const commentarys = [
@@ -59,11 +60,15 @@ const Testimonials = () => {
                     ))
                 }
             </ul>
-            <div className="flex flex-col gap-7 p-10 justify-self-center rounded-3xl mt-3">
-                <TextBlue className="text-2xl font-black">Você também terá uma ótima experiência.</TextBlue>
-                <ButtonWhats className={'w-full'} >
-                    Chamar no WhatsApp
-                </ButtonWhats>
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-self-center rounded-3xl mt-20">
+                <img src={ImgTestimonials} className="max-w-90 rounded-2xl w-full" alt="Foto de duas crianças mulheres abraçando" />
+                <div className="flex flex-col gap-6">
+                    <TextBlue className="text-2xl font-black sm:w-80">Você também terá uma ótima experiência.</TextBlue>
+                    <ButtonWhats className={'w-full'} >
+                        Chamar no WhatsApp
+                    </ButtonWhats>
+
+                </div>
             </div>
         </div>
     )

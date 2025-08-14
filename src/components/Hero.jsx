@@ -23,7 +23,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='w-full max-w-110 shadow-2xl shadow-zinc-200 mt-10 sm:mt-0 bg-pink-100 rounded-3xl ' src={ImageHero} alt="Foto de Lápis, papel, canetas..." />
+                    <img className='w-full max-w-150' src={ImageHero} alt="Foto de Lápis, papel, canetas..." />
                 </div>
             </div>
         </main>

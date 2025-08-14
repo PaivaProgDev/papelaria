@@ -9,6 +9,14 @@ export const ButtonWhats = ({ className, children }) => {
     )
 }
 
+export const ButtonWhatsProduct = ({ className, children, title, price }) => {
+    return (
+        <a target="_blank" href={`https://wa.me/5537991129432?text=Olá,%20tem%20*${title}*%20por%20*${price}*?`}>
+            {children}
+        </a>
+    )
+}
+
 export const ButtonInsta = ({ className, children }) => {
     return <a href="https://www.instagram.com/papelariapresente2024/" className={`${className} bg-gradient-to-r w-fit text-sm from-[#b517b9] to-[#f66e3b] flex items-center gap-3 justify-center py-2 px-5 rounded-full text-white cursor-pointer hover:to-white hover:from-white border-2  border-[#b517b9] hover:text-[#b517b9] duration-300`}><FaInstagram className="size-5" />Instagram</a>
 }

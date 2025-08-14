@@ -55,23 +55,23 @@ const Header = ({ catalog }) => {
                     </ul>
                 </nav>
             </div>
-            <div onClick={() => setOpenMenu(false)} className={`${openMenu ? "visible opacity-100" : "invisible opacity-0"} fixed duration-200 w-full bg-w z-50 h-full bg-[#00000082]`}>
+            <div onClick={() => setOpenMenu(false)} className={`${openMenu ? "visible opacity-100" : "invisible opacity-0"} fixed duration-200 w-full  h-full bg-[#00000082]`}>
                 <div onClick={(e) => {
                     e.stopPropagation()
                     setOpenMenu(false)
-                }} className={`${openMenu ? "lg:right-0 top-[57px]" : "lg:-right-full -top-full "} lg:top-[57px] duration-300 px-7 py-5 bg-zinc-100 -z-50 ease-in-out fixed lg:w-55 lg:h-full w-full lg:bottom-0 border-l border-zinc-200`}>
+                }} className={`${openMenu ? "lg:right-0 top-[57px]" : "lg:-right-full -top-full "} lg:top-[57px]  duration-300 px-7 py-5 bg-zinc-100  ease-in-out fixed lg:w-55 lg:h-full w-full lg:bottom-0 border-l border-zinc-200`}>
                     <nav>
-                        <ul className="grid grid-cols-2 place-self-center sm:grid-cols-3 gap-7 ">
+                        <ul className={`${catalog ? "grid-cols-1" : "grid-cols-2"} grid place-self-center sm:grid-cols-3 gap-7`}>
                             {
                                 !catalog && links.map((l, index) => (
-                                    <li>
-                                        <a href={l.href} className="text-zinc-800" key={index}>
+                                    <li key={index}>
+                                        <a href={l.href} className="text-zinc-800" >
                                             <TextBlue className='flex items-center flex-col gap-1'>
                                                 {l.title !== "Catálogo" && l.icon}
                                                 {l.title !== "Catálogo" && l.title}
                                             </TextBlue>
                                         </a>
-                                        <Link to={l.to} className="text-zinc-800" key={index}>
+                                        <Link to={l.to} className="text-zinc-800">
                                             <TextBlue className='flex items-center flex-col gap-1'>
                                                 {l.title === "Catálogo" && l.icon}
                                                 {l.title === "Catálogo" && l.title}
@@ -80,20 +80,18 @@ const Header = ({ catalog }) => {
                                     </li>
                                 ))
                             }
-                            <li>
-                                {
-                                    catalog && linksCatalog.map((l, index) => (
-                                        <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
-                                            <Link to={l.to}>
-                                                <TextBlue className='flex items-center flex-col gap-2'>
-                                                    {l.icon}
-                                                    {l.title}
-                                                </TextBlue>
-                                            </Link>
-                                        </li>
-                                    ))
-                                }
-                            </li>
+                            {
+                                catalog && linksCatalog.map((l, index) => (
+                                    <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
+                                        <Link to={l.to}>
+                                            <TextBlue className='flex items-center flex-col gap-2'>
+                                                {l.icon}
+                                                {l.title}
+                                            </TextBlue>
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                         <ButtonWhats className={' flex justify-center place-self-center mt-6 text-sm'} >
                             Chamar no WhatsApp

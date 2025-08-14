@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { ButtonWhats } from "../components/Button"
+import { ButtonWhats, ButtonWhatsProduct } from "../components/Button"
 import { TextBlue, TextPink } from '../components/TextColor'
 import { FaMagnifyingGlass } from "react-icons/fa6"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 const Catalog = () => {
     const [data, setData] = useState([])
@@ -38,68 +39,50 @@ const Catalog = () => {
     return (
         <>
             {loading && <div className="fixed z-[99] flex flex-col items-center gap-5 justify-center top- right-0 left-0 bottom-0 w-full h-full bg-gradient-to-bl from-violet-400 to-blue-400">
-                <span className="text-xl font-light text-white">Carregando Produtos...</span>
+                <span className="text-xl font-light text-white">Carregando produtos...</span>
                 <span className="loader"></span>
             </div>}
             <Header catalog />
-            <div className={` flex-col px-6 py-10`}>
-                <h3 className="text-5xl font-extrabold mb-4"><TextPink>Catálogo</TextPink></h3>
-                <TextBlue>Explore nossos produtos, use a barra de pesquisa para encontrar seu produto!</TextBlue>
+            <div className={` flex-col px-6 py-10 bg-gradient-to-br from-sky-100 to-60% to-pink-100`}>
+                <h3 className="text-5xl font-extrabold text-center md:text-start mb-4"><TextPink>Catálogo</TextPink></h3>
+                <p className="text-zinc-500 text-center sm:text-start text-sm">Explore nossos produtos, use a barra de pesquisa para encontrar seu produto ideal!</p>
                 <div className="relative w-full flex mt-7 justify-center">
                     <label className="flex items-center z-10 w-full bg-slate-100 focus-within:outline-2 border-zinc-300 outline-violet-500 gap-2 border py-1.5 px-4">
                         <input onChange={handleInputValue} className="placeholder:text-zinc-400 w-full text-sm outline-0" type="serach" placeholder="Pesquisar produto..." />
                         <FaMagnifyingGlass className="text-zinc-500" />
                     </label>
                 </div >
-                <ul className={`${searchValue && itemSearched.length === 0 ? "flex" : "grid"}  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-self-center mt-15 gap-5`}>
-                    {searchValue && itemSearched.length === 0 && <p className="w-full text-zinc-700">Não encontramos nenhum produto :(</p>}
-
-                    {searchValue && itemSearched.length !== 0 && itemSearched.map((p) => (
-                        <li key={p.id} className="bg-violet-50 border border-zinc-200  text-start flex-1 max-w-90 rounded-xl">
-                            <div className="bg-white rounded-t-xl p-3">
-                                <img
-                                    className="rounded-t-xl object-cover  h-[200px] w-full"
-                                    src={p.img}
-                                    alt=""
-                                />
-                            </div>
-                            <div className="px-6 py-6 border-t border-zinc-200">
-                                <h4 className="text-zinc-700 font-normal text-md mb-4 ">{p.title}</h4>
-                                <pre className="flex items-end gap-1 mb-4">
-                                    <span className="text-md font-light">R$</span>
-                                    <span className="text-2xl text-zinc-700">{p.price}</span>
-                                </pre>
-                                <ButtonWhats className="cursor-pointer w-full rounded-lg ">
-                                    Verificar estoque
-                                </ButtonWhats>
-                            </div>
-                        </li>
-                    ))}
-
-                    {!searchValue && data?.map((p) => (
-                        <li key={p.id} className="bg-violet-50 border border-zinc-200  text-start flex-1 max-w-90 rounded-xl">
-                            <div className="bg-white rounded-t-xl p-3">
-                                <img
-                                    className="rounded-t-xl object-cover  h-[200px] w-full"
-                                    src={p.img}
-                                    alt=""
-                                />
-                            </div>
-                            <div className="px-6 py-6 border-t border-zinc-200">
-                                <h4 className="text-zinc-700 font-normal text-md mb-4 ">{p.title}</h4>
-                                <pre className="flex items-end gap-1 mb-4">
-                                    <span className="text-md font-light">R$</span>
-                                    <span className="text-2xl text-zinc-700">{p.price}</span>
-                                </pre>
-                                <ButtonWhats className="cursor-pointer w-full rounded-lg ">
-                                    Verificar estoque
-                                </ButtonWhats>
-                            </div>
+                <ul className={`${searchValue && itemSearched.length === 0 ? "flex" : "grid"}  md:grid-cols-2  lg:grid-cols-3  h-full xl:grid-cols-4 place-self-center mt-15 gap-8`}>
+                    {searchValue && itemSearched.length === 0 && (
+                        <div className="w-full h-full min-h-120 bg-white text-zinc-700">
+                            Não encontramos nenhum produto :(
+                        </div>
+                    )}
+                    {(searchValue ? itemSearched : data)?.map((p) => (
+                        <li
+                            key={p.id}
+                            className="max-w-90 sm:max-w-80 h-full group
+                            ">
+                            <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer group-hover:bg-amber-200 group w-full h-full flex flex-col !border-0">
+                                <div className="h-[200px] rounded-t-xl">
+                                    <img
+                                        className="rounded-t-xl  object-cover h-full w-full"
+                                        src={p.img}
+                                        alt="Imagem do produto"
+                                    />
+                                </div>
+                                <div className=" px-3 py-2 pt-3 text-center flex items-center flex-col w-full shadow-lg min-h-[100px] bg-white rounded-lg mt-6">
+                                    <h4 className="text-zinc-500 font-medium text-sm max-w-50  w-full mb-2">{p.title}</h4>
+                                    <pre className="flex justify-center items-center gap-1">
+                                        <span className="text-sm font-light">R$</span>
+                                        <span className="text-xl text-zinc-700">{p.price}</span>
+                                    </pre>
+                                </div>
+                            </ButtonWhatsProduct>
                         </li>
                     ))}
                 </ul>
-            </div>
-
+            </div >
         </>
     )
 }

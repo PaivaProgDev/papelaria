@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const BestSellers = () => {
     return (
-        <div id='bestSellers' className='text-center max-w-[90rem] mx-auto px-6 m-20'>
+        <div id='bestSellers' className='text-center max-w-[90rem] mx-auto px-6 py-15'>
             <h2 className='flex  items-center justify-center gap-2 mb-3'>
                 <LuShoppingBag className='size-7 text-yellow-500' />
                 <span className='text-pink-600'>Best Sellers</span>

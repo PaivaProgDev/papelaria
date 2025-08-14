@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'swiper/css/effect-flip'
 import 'swiper/css/bundle'
-import { ButtonWhats } from "./Button";
+import { ButtonWhats, ButtonWhatsProduct } from "./Button";
 
 const Cards = () => {
     const [data, setData] = useState([])
@@ -41,27 +41,29 @@ const Cards = () => {
         }
     }
     return (
-        <Carousel itemClass="mt-12 px-3" containerClass="z-10" responsive={responsive}>
+        <Carousel itemClass="mt-12 px-10" containerClass="z-10justify-center" responsive={responsive}>
             {data &&
                 data.map((p) => (
-                    <div key={p.id} className="bg-violet-50 border border-zinc-200  text-start flex-1 max-w-90 rounded-xl">
-                        <div className="bg-white rounded-t-xl p-3">
-                            <img
-                                className="rounded-t-xl object-cover  h-[200px] w-full"
-                                src={p.img}
-                                alt=""
-                            />
-                        </div>
-                        <div className="px-6 py-6 border-t border-zinc-200">
-                            <h4 className="text-zinc-700 font-normal text-lg mb-4 ">{p.title}</h4>
-                            <pre className="flex items-end gap-1 mb-4">
-                                <span className="text-md font-light">R$</span>
-                                <span className="text-2xl text-zinc-700">{p.price}</span>
-                            </pre>
-                            <ButtonWhats className="cursor-pointer w-full rounded-lg ">
-                                Verificar estoque
-                            </ButtonWhats>
-                        </div>
+                    <div
+                        key={p.id}
+                        className="text-start  rounded-xl"
+                    >
+                        <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer rounded-none rounded-b-xl !opacity-100 flex-col bg-transparent !border-0">
+                            <div className="h-[200px] bg-zinc-100 rounded-t-xl">
+                                <img
+                                    className="rounded-t-xl  object-cover h-full w-full"
+                                    src={p.img}
+                                    alt="Imagem do produto"
+                                />
+                            </div>
+                            <div className=" px-3 py-2 pt-3 text-center flex items-center flex-col w-full min-h-[100px] bg-white rounded-lg mt-6">
+                                <h4 className="text-zinc-500 font-medium text-sm max-w-50  w-full mb-2">{p.title}</h4>
+                                <pre className="flex justify-center items-center gap-1">
+                                    <span className="text-sm font-light">R$</span>
+                                    <span className="text-xl text-zinc-700">{p.price}</span>
+                                </pre>
+                            </div>
+                        </ButtonWhatsProduct>
                     </div>
                 ))}
         </Carousel>
