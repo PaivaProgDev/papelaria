@@ -3,6 +3,8 @@ import { TextBlue, TextPink } from "./TextColor"
 import { LiaStarSolid } from "react-icons/lia"
 import { ButtonWhats } from "./Button"
 import ImgTestimonials from '../assets/images/img-hero3.jpg'
+import { Link } from "react-router-dom"
+import { CgChevronRight } from "react-icons/cg"
 
 const Testimonials = () => {
     const commentarys = [
@@ -43,7 +45,7 @@ const Testimonials = () => {
             <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-self-center gap-6 mt-15">
                 {
                     commentarys.map((client, index) => (
-                        <li key={index} className="border-2 max-w-100  border-pink-100 bg-gradient-to-br from-[#fcf2f8] to-blue-50 rounded-3xl p-7">
+                        <li key={index} className="border-2 max-w-100 flex flex-col justify-between border-pink-100 bg-gradient-to-br from-[#fcf2f8] to-blue-50 rounded-3xl p-7">
                             <div className="flex text-yellow-500 place-self-center mb-7 text-2xl">
                                 <LiaStarSolid />
                                 <LiaStarSolid />
@@ -62,12 +64,17 @@ const Testimonials = () => {
             </ul>
             <div className="flex flex-col md:flex-row gap-8 items-center justify-self-center rounded-3xl mt-20">
                 <img src={ImgTestimonials} className="max-w-90 rounded-2xl w-full" alt="Foto de duas crianças mulheres abraçando" />
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-8">
                     <TextBlue className="text-2xl font-black sm:w-80">Você também terá uma ótima experiência.</TextBlue>
-                    <ButtonWhats className={'w-full'} >
-                        Chamar no WhatsApp
-                    </ButtonWhats>
-
+                    <div>
+                        <ButtonWhats className={'w-full'} >
+                            Chamar no WhatsApp
+                        </ButtonWhats>
+                        <Link to={'/catalog'} className="bg-white mt-3 group flex items-center gap-1.5 py-2 px-5 rounded-full group text-sm text-blue-500 justify-center w-full cursor-pointer hover:bg-blue-500 border-2 border-blue-500 hover:text-white duration-300">
+                            Ver produtos
+                            <span><CgChevronRight className="group-hover:animate-pulse size-5" /></span>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

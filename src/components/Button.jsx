@@ -2,7 +2,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 export const ButtonWhats = ({ className, children }) => {
     return (
-        <a target="_blank" className={`${className} bg-[#22c55e] w-fit flex items-center gap-3 py-2 px-5 rounded-full text-sm text-white justify-center cursor-pointer hover:bg-white border-2  border-[#22c55e] hover:text-[#22c55e] duration-300`} href="https://wa.me/5537991129432">
+        <a target="_blank" className={`${className} bg-[#22c55e] w-fit flex items-center gap-3 py-2 px-5 rounded-full text-sm text-white justify-center cursor-pointer hover:bg-white border-2 border-[#22c55e] hover:text-[#22c55e] duration-300`} href="https://wa.me/5537991129432">
             <FaWhatsapp className="size-5" />
             {children}
         </a>
