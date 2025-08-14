@@ -1,6 +1,6 @@
 import { BiPencil } from "react-icons/bi"
-import { FaWhatsapp } from "react-icons/fa"
-import { IoBagHandleSharp, IoCall, IoHome } from "react-icons/io5"
+import { GrCatalog } from "react-icons/gr"
+import { IoCall, IoHome } from "react-icons/io5"
 import { MdMessage } from "react-icons/md"
 
 const Links = () => {
@@ -16,9 +16,9 @@ const Links = () => {
             href: "#about"
         },
         {
-            title: "Produtos",
-            icon: <IoBagHandleSharp className="size-6  text-blue-400" />,
-            href: "#bestSellers"
+            title: "Catálogo",
+            icon: <GrCatalog className="size-6  text-blue-400" />,
+            to: "/catalog"
         },
         {
             title: "Depoimentos",
@@ -31,8 +31,15 @@ const Links = () => {
             href: "#contact"
         }
     ]
+    const linksCatalog = [
+        {
+            title: "Início",
+            icon: <IoHome className="size-6  text-blue-400" />,
+            to: "/"
+        },
+    ]
 
-    return { links }
+    return { links, linksCatalog }
 }
 
 export default Links

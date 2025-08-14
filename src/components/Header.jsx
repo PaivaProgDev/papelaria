@@ -4,35 +4,50 @@ import { useState } from "react"
 import { IoMdClose } from "react-icons/io"
 import { ButtonWhats } from "./Button"
 import { TextBlue } from "./TextColor"
-import SearchBar from "./SearchBar"
+import { Link } from "react-router-dom"
 
-const Header = () => {
+const Header = ({ catalog }) => {
     const [openMenu, setOpenMenu] = useState(false)
     const handleOpenMenu = () => {
         setOpenMenu(!openMenu)
     }
 
-    const { links } = Links()
+    const { links, linksCatalog } = Links()
     return (
-        <header className="sticky top-0 shadow-lg">
+        <header className="sticky top-0 z-50 shadow-lg">
             <div className="flex items-center gap-10 z-[999] px-6 py-3  border-b bg-white border-zinc-200 justify-between">
-                <h1 className="text-2xl">Logo</h1>
-                <div className="hidden w-full  justify-center max-w-200 sm:flex">
-                    <SearchBar />
-                </div>
+                <Link to={'/'}>
+                    <h1 className="text-2xl">Logo</h1>
+                </Link>
                 {
                     openMenu ? <span><IoMdClose onClick={handleOpenMenu} className="size-7 text-red-400 cursor-pointer" /></span> : <span><IoMenuSharp onClick={handleOpenMenu} className="size-7 lg:hidden block cursor-pointer" /></span>
                 }
                 <nav className="hidden lg:block">
                     <ul className="flex items-center gap-10">
                         {
-                            links.map((l, index) => (
+                            !catalog && links.map((l, index) => (
                                 <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
                                     <a href={l.href}>
                                         <TextBlue className='flex items-center flex-col gap-2'>
-                                            {l.title}
+                                            {l.title !== "Catálogo" && l.title}
                                         </TextBlue>
                                     </a>
+                                    <Link to={l.to}>
+                                        <TextBlue className='flex items-center flex-col gap-2'>
+                                            {l.title === "Catálogo" && l.title}
+                                        </TextBlue>
+                                    </Link>
+                                </li>
+                            ))
+                        }
+                        {
+                            catalog && linksCatalog.map((l, index) => (
+                                <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
+                                    <Link to={l.to}>
+                                        <TextBlue className='flex items-center flex-col gap-2'>
+                                            {l.title}
+                                        </TextBlue>
+                                    </Link>
                                 </li>
                             ))
                         }
@@ -48,24 +63,43 @@ const Header = () => {
                     <nav>
                         <ul className="grid grid-cols-2 place-self-center sm:grid-cols-3 gap-7 ">
                             {
-                                links.map((l, index) => (
-                                    <a href={l.href} className="text-zinc-800" key={index}>
-                                        <TextBlue className='flex items-center flex-col gap-1'>
-                                            {l.icon}
-                                            {l.title}
-                                        </TextBlue>
-                                    </a>
+                                !catalog && links.map((l, index) => (
+                                    <li>
+                                        <a href={l.href} className="text-zinc-800" key={index}>
+                                            <TextBlue className='flex items-center flex-col gap-1'>
+                                                {l.title !== "Catálogo" && l.icon}
+                                                {l.title !== "Catálogo" && l.title}
+                                            </TextBlue>
+                                        </a>
+                                        <Link to={l.to} className="text-zinc-800" key={index}>
+                                            <TextBlue className='flex items-center flex-col gap-1'>
+                                                {l.title === "Catálogo" && l.icon}
+                                                {l.title === "Catálogo" && l.title}
+                                            </TextBlue>
+                                        </Link>
+                                    </li>
                                 ))
                             }
+                            <li>
+                                {
+                                    catalog && linksCatalog.map((l, index) => (
+                                        <li className="text-zinc-800 text-sm cursor-pointer" key={index}>
+                                            <Link to={l.to}>
+                                                <TextBlue className='flex items-center flex-col gap-2'>
+                                                    {l.icon}
+                                                    {l.title}
+                                                </TextBlue>
+                                            </Link>
+                                        </li>
+                                    ))
+                                }
+                            </li>
                         </ul>
                         <ButtonWhats className={' flex justify-center place-self-center mt-6 text-sm'} >
                             Chamar no WhatsApp
                         </ButtonWhats >
                     </nav>
                 </div>
-            </div>
-            <div className="flex bg-white relative sm:hidden px-6 py-2">
-                <SearchBar />
             </div>
         </header>
     )

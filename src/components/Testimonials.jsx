@@ -28,7 +28,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <div id="testimonials" className='text-center max-w-[90rem]  mx-auto px-6'>
+        <div id="testimonials" className='text-center max-w-[90rem] mt-18 mb-12 mx-auto px-6'>
             <h2 className='flex  items-center justify-center gap-2 mb-3'>
                 <RiSpeakFill className='size-7 text-yellow-500' />
                 <span className='text-pink-600'>Depoimentos</span>

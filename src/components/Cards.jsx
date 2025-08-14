@@ -41,13 +41,13 @@ const Cards = () => {
         }
     }
     return (
-        <Carousel itemClass="mt-12 px-3 " containerClass="-z-10" responsive={responsive}>
+        <Carousel itemClass="mt-12 px-3" containerClass="z-10" responsive={responsive}>
             {data &&
                 data.map((p) => (
-                    <div key={p.id} className="bg-violet-50 border border-zinc-200  text-start flex-1 max-w-100 rounded-xl">
+                    <div key={p.id} className="bg-violet-50 border border-zinc-200  text-start flex-1 max-w-90 rounded-xl">
                         <div className="bg-white rounded-t-xl p-3">
                             <img
-                                className="rounded-t-xl object-cover  h-[250px] w-full"
+                                className="rounded-t-xl object-cover  h-[200px] w-full"
                                 src={p.img}
                                 alt=""
                             />

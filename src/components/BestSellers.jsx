@@ -1,8 +1,8 @@
-import React from 'react'
 import Cards from './Cards'
 import { LuShoppingBag } from 'react-icons/lu'
 import { TextPink } from './TextColor'
 import { BsArrowRight } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const BestSellers = () => {
     return (
@@ -17,10 +17,10 @@ const BestSellers = () => {
                 </TextPink>
             </h1>
             <Cards />
-            <button className='text-blue-600 cursor-pointer mt-5 border-b place-self-center flex items-center gap-2'>
+            <Link to={'/catalog'} className='text-blue-600 cursor-pointer mt-5 border-b place-self-center flex items-center gap-2'>
                 Ver catálogo
                 <BsArrowRight />
-            </button>
+            </Link>
         </div>
     )
 }
