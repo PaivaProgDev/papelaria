@@ -142,5 +142,35 @@
     "title": "Pincel n°00 ao n°10 marca Kaz",
     "img": "/images/allProducts/pincel1.png",
     "price": "Á partir de 2,99"
+  },
+  {
+    "id": 25,
+    "title": "Marca Texto rosa marca Masterprint",
+    "img": "/images/allProducts/marcatexto1.png",
+    "price": "3,90"
+  },
+  {
+    "id": 26,
+    "title": "Marca Texto luminárias marca Cis",
+    "img": "/images/allProducts/marcatexto2.png",
+    "price": "4,80"
+  },
+  {
+    "id": 27,
+    "title": "Mini Grampeador marca Kaz",
+    "img": "/images/allProducts/grampeador1.png",
+    "price": "9,50"
+  },
+  {
+    "id": 28,
+    "title": "Clips do n°2/0 ao n°8/0 Kaz",
+    "img": "/images/allProducts/clip1.png",
+    "price": "Á partir de 4,50"
+  },
+  {
+    "id": 29,
+    "title": "Grampos Galvanizado 26/6 com 1000 unidades marca Kaz",
+    "img": "/images/allProducts/gramp1.png",
+    "price": "Á partir de 4,50"
   }
 ]

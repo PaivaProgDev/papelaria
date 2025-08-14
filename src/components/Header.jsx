@@ -14,7 +14,7 @@ const Header = ({ catalog }) => {
 
     const { links, linksCatalog } = Links()
     return (
-        <header className="sticky top-0 z-50 shadow-lg">
+        <header className="sticky top-0 z-[1000] shadow-lg">
             <div className="flex items-center gap-10 z-[999] px-6 py-3  border-b bg-white border-zinc-200 justify-between">
                 <Link to={'/'}>
                     <h1 className="text-2xl">Logo</h1>

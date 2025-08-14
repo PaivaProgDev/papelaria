@@ -8,6 +8,8 @@ const Catalog = () => {
     const [data, setData] = useState([])
     const [itemSearched, setItemSearched] = useState([])
     const [searchValue, setSearchValue] = useState("")
+    const [loading, setLoading] = useState(true)
+
 
     const handleInputValue = (e) => {
         const value = e.target.value
@@ -17,17 +19,28 @@ const Catalog = () => {
         setItemSearched(filtered)
     }
 
+
     useEffect(() => {
         const products = async () => {
             const res = await fetch('/allProducts.json')
             const dataProduct = await res.json()
             setData(dataProduct)
+
+            document.body.style.overflowY = 'hidden'
+            await new Promise((p) => setTimeout(p, 1500))
+            document.body.style.overflowY = 'auto'
+
+            setLoading(false)
         }
         products()
     }, [])
 
     return (
         <>
+            {loading && <div className="fixed z-[99] flex flex-col items-center gap-5 justify-center top- right-0 left-0 bottom-0 w-full h-full bg-gradient-to-bl from-violet-400 to-blue-400">
+                <span className="text-xl font-light text-white">Carregando Produtos...</span>
+                <span className="loader"></span>
+            </div>}
             <Header catalog />
             <div className={` flex-col px-6 py-10`}>
                 <h3 className="text-5xl font-extrabold mb-4"><TextPink>Catálogo</TextPink></h3>
@@ -86,6 +99,7 @@ const Catalog = () => {
                     ))}
                 </ul>
             </div>
+
         </>
     )
 }
