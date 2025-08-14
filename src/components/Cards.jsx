@@ -49,9 +49,9 @@ const Cards = () => {
                         className="text-start  rounded-xl"
                     >
                         <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer rounded-none rounded-b-xl !opacity-100 flex-col bg-transparent !border-0">
-                            <div className="h-[200px] bg-zinc-100 rounded-t-xl">
+                            <div className=" bg-zinc-100 rounded-t-xl">
                                 <img
-                                    className="rounded-t-xl  object-cover h-full w-full"
+                                    className="rounded-t-xl object-cover  h-70 w-full"
                                     src={p.img}
                                     alt="Imagem do produto"
                                 />
