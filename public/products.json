@@ -12,10 +12,9 @@
     "price": "6,40"
   },
   {
-    "id": 3,
-    "title": "Borracha Plástica com capa protetora marca Kaz",
-    "img": "/images/products/borrachakazz1.png",
-    "price": "5,10"
+    "title": "Tinta Tempera Guache 15ml marca Acrilex ",
+    "img": "/images/allProducts/tinta1.png",
+    "price": "3,99"
   },
   {
     "id": 4,
@@ -25,20 +24,20 @@
   },
   {
     "id": 5,
-    "title": "Lápis com borracha preto HB Tons pastéis marca Kaz",
-    "img": "/images/products/lapis1.png",
-    "price": "2,45"
+    "title": "Mini Grampeador marca Kaz",
+    "img": "/images/allProducts/grampeador1.png",
+    "price": "9,50"
   },
   {
     "id": 6,
-    "title": "Lapiseira 2.0 com apontador de grafite marca Kaz",
-    "img": "/images/products/lapiseira1.png",
-    "price": "10,99"
+    "title": "Cola Branca 1kg marca Cola Mais",
+    "img": "/images/allProducts/cola5.png",
+    "price": "24,99"
   },
   {
     "id": 7,
-    "title": "Cola Bastão Hollie Funtastic 10 marca Tris",
-    "img": "/images/products/colabastao1.png",
-    "price": "9,49"
+    "title": "Marca Texto luminárias marca Cis",
+    "img": "/images/allProducts/marcatexto2.png",
+    "price": "4,80"
   }
 ]

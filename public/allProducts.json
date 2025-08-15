@@ -166,5 +166,35 @@
     "title": "Grampos Galvanizado 26/6 com 1000 unidades marca Kaz",
     "img": "/images/allProducts/gramp1.png",
     "price": "9,60"
+  },
+  {
+    "id": 29,
+    "title": "Apontador com Coletor marca Kaz",
+    "img": "/images/allProducts/apontador1.png",
+    "price": "4,99"
+  },
+  {
+    "id": 30,
+    "title": "Apontador mini marca Leo e Leo ",
+    "img": "/images/allProducts/apontador2.png",
+    "price": "2,50"
+  },
+  {
+    "id": 31,
+    "title": "Apontador com Depósito marca Bazze",
+    "img": "/images/allProducts/apontador3.png",
+    "price": "3,20"
+  },
+  {
+    "id": 32,
+    "title": "Apontador com depósito 2 furos marca Kaz",
+    "img": "/images/allProducts/apontador4.png",
+    "price": "9,50"
+  },
+  {
+    "id": 33,
+    "title": "Prendedores de Papel carinhas marca Kaz",
+    "img": "/images/allProducts/prendedor1.png",
+    "price": "4,50"
   }
 ]
