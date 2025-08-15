@@ -50,7 +50,7 @@ const Cards = () => {
                         className="text-start max-w-90 rounded-xl group"
                     >
                         <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer group-hover:bg-amber-200 group w-full h-full flex flex-col !border-0">
-                            <div className="h-[200px] relative overflow-hidden rounded-t-xl">
+                            <div className="h-[200px] relative bg-zinc-100 overflow-hidden rounded-t-xl">
                                 <img
                                     className="rounded-t-xl group-hover:scale-105 duration-300  object-cover h-full w-full"
                                     src={p.img}
