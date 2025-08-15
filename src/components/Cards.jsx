@@ -36,12 +36,13 @@ const Cards = () => {
             items: 2
         },
         mobile: {
-            breakpoint: { max: 664, min: 0 },
+            breakpoint: { max: 464, min: 0 },
             items: 1
         }
-    }
+    };
+
     return (
-        <Carousel itemClass="mt-12 px-10" containerClass="z-10 justify-center" responsive={responsive}>
+        <Carousel itemClass="mt-12 " containerClass="z-10 g-12" responsive={responsive}>
             {data &&
                 data.map((p) => (
                     <div
@@ -49,13 +50,11 @@ const Cards = () => {
                         className="text-start  rounded-xl"
                     >
                         <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer rounded-none rounded-b-xl !opacity-100 flex-col bg-transparent !border-0">
-                            <div className=" bg-zinc-100 rounded-t-xl">
-                                <img
-                                    className="rounded-t-xl object-cover  h-70 w-full"
-                                    src={p.img}
-                                    alt="Imagem do produto"
-                                />
-                            </div>
+                            <img
+                                className="rounded-t-xl object-cover  h-70 w-full"
+                                src={p.img}
+                                alt="Imagem do produto"
+                            />
                             <div className=" px-3 py-2 pt-3 text-center flex items-center flex-col w-full min-h-[100px] bg-white rounded-lg mt-6">
                                 <h4 className="text-zinc-500 font-medium text-sm max-w-50  w-full mb-2">{p.title}</h4>
                                 <pre className="flex justify-center items-center gap-1">
