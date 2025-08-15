@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer className="pt-16 px-6 bg-[#111827] text-zinc-100">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 pb-16 max-w-[90rem] mx-auto  gap-13">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 pb-16 max-w-[90rem] mx-auto gap-13">
                 <div className="flex flex-col gap-5">
                     <Logo className={'max-w-100 w-full'} />
                     <p>

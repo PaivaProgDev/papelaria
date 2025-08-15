@@ -41,7 +41,7 @@ const Cards = () => {
         }
     }
     return (
-        <Carousel itemClass="mt-12 px-10" containerClass="z-10justify-center" responsive={responsive}>
+        <Carousel itemClass="mt-12 px-10" containerClass="z-10 justify-center" responsive={responsive}>
             {data &&
                 data.map((p) => (
                     <div
