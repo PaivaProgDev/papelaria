@@ -5,6 +5,7 @@ import { TextBlue } from "./TextColor"
 import { FiMapPin } from "react-icons/fi"
 import { LuMessageCircle } from "react-icons/lu"
 import { HiOutlineMail } from "react-icons/hi"
+import Logo from "./Logo"
 
 const Footer = () => {
     const { links } = Links()
@@ -13,7 +14,7 @@ const Footer = () => {
         <footer className="pt-16 px-6 bg-[#111827] text-zinc-100">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 pb-16 max-w-[90rem] mx-auto  gap-13">
                 <div className="flex flex-col gap-5">
-                    <h3 className="text-2xl">Logo</h3>
+                    <Logo className={'max-w-100 w-full'} />
                     <p>
                         Transformando o comum em especial através de produtos únicos de papelaria, moda e presentes. Cada item é escolhido com carinho para expressar seu estilo.
                     </p>

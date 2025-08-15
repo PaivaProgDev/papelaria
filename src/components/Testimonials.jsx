@@ -2,7 +2,7 @@ import { RiSpeakFill } from "react-icons/ri"
 import { TextBlue, TextPink } from "./TextColor"
 import { LiaStarSolid } from "react-icons/lia"
 import { ButtonWhats } from "./Button"
-import ImgTestimonials from '../assets/images/img-hero3.jpg'
+import LogoPerson from '../assets/images/logo-person.png'
 import { Link } from "react-router-dom"
 import { CgChevronRight } from "react-icons/cg"
 
@@ -63,7 +63,7 @@ const Testimonials = () => {
                 }
             </ul>
             <div className="flex flex-col md:flex-row gap-8 items-center justify-self-center rounded-3xl mt-20">
-                <img src={ImgTestimonials} className="max-w-90 rounded-2xl w-full" alt="Foto de duas crianças mulheres abraçando" />
+                <img src={LogoPerson} className="max-w-90 w-full" alt="Foto de duas crianças mulheres abraçando" />
                 <div className="flex flex-col gap-8">
                     <TextBlue className="text-2xl font-black sm:w-80">Você também terá uma ótima experiência.</TextBlue>
                     <div>

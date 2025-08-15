@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io"
 import { ButtonWhats } from "./Button"
 import { TextBlue } from "./TextColor"
 import { Link } from "react-router-dom"
+import Logo from "./Logo"
 
 const Header = ({ catalog }) => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -17,7 +18,7 @@ const Header = ({ catalog }) => {
         <header className="sticky top-0 z-[1000] shadow-lg">
             <div className="flex items-center gap-10 z-[999] px-6 py-3  border-b bg-white border-zinc-200 justify-between">
                 <Link to={'/'}>
-                    <h1 className="text-2xl">Logo</h1>
+                    <Logo className='w-full max-w-20' />
                 </Link>
                 {
                     openMenu ? <span><IoMdClose onClick={handleOpenMenu} className="size-7 text-red-400 cursor-pointer" /></span> : <span><IoMenuSharp onClick={handleOpenMenu} className="size-7 lg:hidden block cursor-pointer" /></span>

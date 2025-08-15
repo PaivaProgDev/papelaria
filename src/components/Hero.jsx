@@ -1,4 +1,4 @@
-import { TextPink } from './TextColor'
+import { TextBlue, TextPink } from './TextColor'
 import { ButtonInsta, ButtonWhats } from './Button'
 import { CiStar } from 'react-icons/ci'
 import ImageHero from '../assets/images/img-hero.png'
@@ -12,9 +12,8 @@ const Hero = () => {
                         <CiStar className='size-8 text-yellow-500' />
                         <span className='text-pink-600'>Bem-vindos à nossa loja</span>
                     </h2>
-                    <h1 className='text-5xl sm:text-6xl font-black mb-6'>Muito mais que <TextPink>papelaria</TextPink></h1>
-                    <p className='text-lg mb-7'>Aqui você encontra <TextPink>estilo, presentes e inspiração.</TextPink></p>
-                    <p >Produtos de papelaria, moda criativa e presentes encantadores — tudo com amor, para quem ama detalhes.</p>
+                    <h1 className='text-5xl sm:text-6xl font-black mb-6'><TextPink>Papelaria Menina dos Olhos de </TextPink><span className='text-sky-500'>Deus</span></h1>
+                    <p className='text-lg mb-7'>Mais que uma Papelaria, aqui você encontra <TextPink>estilo, presentes e inspiração.</TextPink></p>
                     <div className='flex flex-col sm:max-w-full sm:flex-row items-center gap-5 mt-9'>
                         <ButtonWhats className={'!w-full'}>
                             Chamar no WhatsApp
