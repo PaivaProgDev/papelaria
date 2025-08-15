@@ -42,20 +42,29 @@ const Cards = () => {
     };
 
     return (
-        <Carousel itemClass="mt-12 " containerClass="z-10 g-12" responsive={responsive}>
+        <Carousel itemClass="mt-12 " containerClass="z-10" responsive={responsive}>
             {data &&
                 data.map((p) => (
                     <div
                         key={p.id}
-                        className="text-start  rounded-xl"
+                        className="text-start max-w-90 rounded-xl group"
                     >
-                        <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer rounded-none rounded-b-xl !opacity-100 flex-col bg-transparent !border-0">
-                            <img
-                                className="rounded-t-xl object-cover  h-70 w-full"
-                                src={p.img}
-                                alt="Imagem do produto"
-                            />
-                            <div className=" px-3 py-2 pt-3 text-center flex items-center flex-col w-full min-h-[100px] bg-white rounded-lg mt-6">
+                        <ButtonWhatsProduct title={p.title} price={p.price} className="cursor-pointer group-hover:bg-amber-200 group w-full h-full flex flex-col !border-0">
+                            <div className="h-[200px] relative overflow-hidden rounded-t-xl">
+                                <img
+                                    className="rounded-t-xl group-hover:scale-105 duration-300  object-cover h-full w-full"
+                                    src={p.img}
+                                    alt="Imagem do produto"
+                                />
+                                <div className="absolute opacity-0 group-hover:opacity-100 duration-400 bg-[#0000001f] w-full flex justify-center items-center h-full top-0">
+
+                                    <span className=" bg-[#22C55E] flex items-center gap-2 font-light text-white px-4 p-2 rounded-2xl">
+                                        <span><FaWhatsapp className="size-5" /></span>
+                                        Verificar Estoque
+                                    </span>
+                                </div>
+                            </div>
+                            <div className=" px-3 py-2 pt-3 text-center flex items-center flex-col w- min-h-[100px] bg-white mt-6">
                                 <h4 className="text-zinc-500 font-medium text-sm max-w-50  w-full mb-2">{p.title}</h4>
                                 <pre className="flex justify-center items-center gap-1">
                                     <span className="text-sm font-light">R$</span>
